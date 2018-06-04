@@ -9,6 +9,10 @@ import (
 	//"reflect"
 )
 
+type User struct {
+	Data_Info Data_Type
+}
+
 type Data_Type struct {
 	Id         int
 	First_Name string
@@ -16,10 +20,6 @@ type Data_Type struct {
 	Avatar     string
 }
 
-
-type User struct {
-	Data_Info Data_Type
-}
 
 func main() {
 
