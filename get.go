@@ -10,14 +10,14 @@ import (
 )
 
 type User struct {
-	Data_Info Data_Type
+	Data_Info Data_Type `json:"data"`
 }
 
 type Data_Type struct {
-	Id         int
-	First_Name string
-	Last_Name  string
-	Avatar     string
+	Id         int    `json:"id"`
+	First_Name string `json:"first_name"`
+	Last_Name  string `json:"last_name"`
+	Avatar     string `json:"avatar"`
 }
 
 func main() {
@@ -39,7 +39,9 @@ func main() {
 		var user User
 		json.Unmarshal([]byte(contents), &user)
 		var data_new Data_Type = user.Data_Info
-		fmt.Println(data_new.First_Name)
+		fmt.Println(data_new)
+
+		fmt.Println("\n")
 
 	}
 
